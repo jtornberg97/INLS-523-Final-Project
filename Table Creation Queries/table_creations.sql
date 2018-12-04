@@ -23,3 +23,31 @@ CREATE TABLE `course_prerequisites` (
   `has_prerequisite` int(11) REFERENCES courses(id),
   `prerequisite_for` int(11) REFERENCES courses(id)
 );
+
+CREATE TABLE `courses` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` varchar(100) NOT NULL,
+  `description` varchar(255) NOT NULL
+);
+
+CREATE TABLE `instructors` (
+  `instructors_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `instructors_name` varchar(100) NOT NULL,
+  `instructors_email` varchar(200) NOT NULL,
+  `instructors_phone` varchar(15) DEFAULT NULL,
+  `courses_id` int(11) REFERENCES courses(id)
+);
+
+CREATE TABLE `instructor_types` (
+  `instructors_id` int(11) REFERENCES instructors(id),
+  `types` enum('adjunct','graduate','visitng','associate','full') NOT NULL
+);
+
+CREATE TABLE `students` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `enrollment_date` date NOT NULL,
+  `gpa` decimal(4,2) NOT NULL,
+  `accumulated_credit_hours` tinyint(4) NOT NULL
+);
