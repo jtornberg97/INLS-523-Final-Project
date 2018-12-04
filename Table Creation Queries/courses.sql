@@ -1,7 +1,0 @@
-CREATE TABLE courses
-(
-	id	INT NOT NULL	AUTO_INCREMENT	PRIMARY KEY,
-    name	VARCHAR(100)	NOT NULL,
-    number CHAR(3) NOT NULL,
-    description	VARCHAR(255)	NOT NULL
-);
