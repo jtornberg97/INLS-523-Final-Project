@@ -101,9 +101,108 @@ INSERT INTO classes
 	(schedule, location, capacity)
 VALUES
 	("MWF 12-1", "Manning 103", 75);
-    
+
+
 
 -- CLASS REGISTRATIONS
 
+INSERT INTO class_registrations
+	(name, status, grade_achieved, classes_id, students_id)
+VALUES
+	("001-Fall 2018", "Active", 90, 1, 1);
 
+INSERT INTO class_registrations
+	(name, status, grade_achieved, classes_id, students_id)
+VALUES
+	("002-Fall 2018", "Active", 75, 2, 1);
+    
+INSERT INTO class_registrations
+	(name, status, grade_achieved, classes_id, students_id)
+VALUES
+	("003-Fall 2018", "Active", 95, 3, 1);
 
+INSERT INTO class_registrations
+	(name, status, grade_achieved, classes_id, students_id)
+VALUES
+	("001-Fall 2018", "Active", 94, 1, 2);
+
+INSERT INTO class_registrations
+	(name, status, grade_achieved, classes_id, students_id)
+VALUES
+	("002-Fall 2018", "Active", 85, 2, 2);
+
+INSERT INTO class_registrations
+	(name, status, grade_achieved, classes_id, students_id)
+VALUES
+	("003-Fall 2018", "Active", 78, 3, 2);
+
+INSERT INTO class_registrations
+	(name, status, grade_achieved, classes_id, students_id)
+VALUES
+	("001-Fall 2018", "Active", 77, 1, 3);
+
+INSERT INTO class_registrations
+	(name, status, grade_achieved, classes_id, students_id)
+VALUES
+	("002-Fall 2018", "Active", 90, 2, 3);
+
+INSERT INTO class_registrations
+	(name, status, grade_achieved, classes_id, students_id)
+VALUES
+	("003-Fall 2018", "Active", 90, 3, 3);
+    
+-- COURSE PREREQUISITES
+
+INSERT INTO course_prerequisites
+	(courses_id, has_prerequisite)
+VALUES
+	(1, 3);
+
+INSERT INTO course_prerequisites
+	(courses_id)
+VALUES
+	(2);
+
+INSERT INTO course_prerequisites
+	(courses_id)
+VALUES
+	(3);
+    
+INSERT INTO course_prerequisites
+	(courses_id, has_prerequisite)
+VALUES
+	(4, 1);
+
+INSERT INTO course_prerequisites
+	(courses_id, has_prerequisite)
+VALUES
+	(4, 2);
+
+INSERT INTO course_prerequisites
+	(courses_id, has_prerequisite)
+VALUES
+	(4, 3);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
