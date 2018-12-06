@@ -1,10 +1,10 @@
-select * from students;
+-- STUDENTS
 
 INSERT INTO students
 	(name, email, enrollment_date, gpa, accumulated_credit_hours)
 VALUES
 	("Michael Jordan", "mjordan@live.unc.edu", '2018-12-13', 3.8, 100);
-    
+
 INSERT INTO students
 	(name, email, enrollment_date, gpa, accumulated_credit_hours)
 VALUES
@@ -15,10 +15,10 @@ INSERT INTO students
 VALUES
 	("Luke Maye", "lmaye@live.unc.edu", '2018-12-11', 3.5, 20);
 
+SELECT * FROM students;
 
 
-
-select * from courses;
+-- COURSES
 
 INSERT INTO courses
 	(name, description)
@@ -40,36 +40,17 @@ INSERT INTO courses
 VALUES
 	("INLS 560", "Programming with Python");
 
+SELECT * FROM courses;
 
 
 
-select * from course_prerequisites;
-
-INSERT INTO course_prerequisites
-	(course_id, has_prerequisite, prerequisite_for)
-VALUES
-	(1, 3, 4);
-
-INSERT INTO course_prerequisites
-	(course_id, has_prerequisite)
-VALUES
-	(4, 3);
-    
-INSERT INTO course_prerequisites
-	(course_id, has_prerequisite)
-VALUES
-	(4, 2);
-
-
-
-
-select * from instructors;
-
+-- INSTRUCTORS
+ 
 INSERT INTO instructors
 	(name, email, phone)
 VALUES
 	("Dean Smith", "dsmith@unc.edu", "888-999-0000");
-    
+
 INSERT INTO instructors
 	(name, email, phone)
 VALUES
@@ -80,10 +61,11 @@ INSERT INTO instructors
 VALUES
 	("Mack Brown", "mbrown@unc.edu", "888-999-0000");
 
+SELECT * FROM instructors;
 
 
 
-select * from instructor_types;
+-- INSTRUCTOR_TYPES
 
 INSERT INTO instructor_types
 	(instructors_id, types)
@@ -100,73 +82,28 @@ INSERT INTO instructor_types
 VALUES
 	(3, "graduate");
 
+SELECT * FROM instructor_types;
 
 
-select * from classes;
+-- CLASSES
 
 INSERT INTO classes
-	(instance, schedule, location, capacity)
+	(schedule, location, capacity)
 VALUES
-	("-004 Fall 2018", "MWF", "Manning 101", 50);
+	("MWF 9-10", "Manning 101", 50);
     
 INSERT INTO classes
-	(instance, schedule, location, capacity)
+	(schedule, location, capacity)
 VALUES
-	("-003", "TTH", "Manning 102", 100);
+	("TTH 1-2", "Manning 102", 100);
 
 INSERT INTO classes
-	(instance, schedule, location, capacity)
+	(schedule, location, capacity)
 VALUES
-	("-001 Fall 2018", "MWF", "Manning 103", 75);
+	("MWF 12-1", "Manning 103", 75);
+    
 
+-- CLASS REGISTRATIONS
 
-
-
-select * from class_registrations;
-
-INSERT INTO class_registrations
-	(status, grade_achieved, courses_id, classes_id, students_id, instructors_id)
-VALUES
-	("active", 90, 1, 1, 1, 1);
-
-INSERT INTO class_registrations
-	(status, grade_achieved, courses_id, classes_id, students_id, instructors_id)
-VALUES
-	("active", 80, 2, 2, 1,2);
-
-INSERT INTO class_registrations
-	(status, grade_achieved, courses_id, classes_id, students_id, instructors_id)
-VALUES
-	("active", 95, 3, 3, 1, 3 );
-
-INSERT INTO class_registrations
-	(status, grade_achieved, courses_id, classes_id, students_id, instructors_id)
-VALUES
-	("active", 85, 1, 1, 2, 1 );
-
-INSERT INTO class_registrations
-	(status, grade_achieved, courses_id, classes_id, students_id, instructors_id)
-VALUES
-	("active", 90, 2, 2, 2, 2);
-
-INSERT INTO class_registrations
-	(status, grade_achieved, courses_id, classes_id, students_id, instructors_id)
-VALUES
-	("active", 85, 3, 3, 2 ,3);
-
-INSERT INTO class_registrations
-	(status, grade_achieved, courses_id, classes_id, students_id, instructors_id)
-VALUES
-	("active", 90, 3, 3, 3, 3);
-
-INSERT INTO class_registrations
-	(status, grade_achieved, courses_id, classes_id, students_id, instructors_id)
-VALUES
-	("active", 90, 1, 1, 3, 1);
-
-INSERT INTO class_registrations
-	(status, grade_achieved, courses_id, classes_id, students_id, instructors_id)
-VALUES
-	("active", 90, 2, 2, 3, 2);
 
 
